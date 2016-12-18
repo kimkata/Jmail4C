@@ -1,0 +1,7 @@
+收件人姓名	收件人邮件地址	邮件主题	邮件正文	要发送的附件	要发送的附件路径
+
+陈志刚	chenzhigang@tasly.com	test5	测试5	【四川大区季例会费用核销表】-填写本次核销明细-大健康2016.9.6.xls	S:\myCsharp\Jmail4C-2016-11-3\Jmail4C\Jmail4C\setup4mail.txt
+陈志刚	chenzhigang@tasly.com	test5	测试5	【四川大区季例会费用核销表】-填写本次核销明细-大健康2016.9.6.xls	S:\myCsharp\Jmail4C-2016-11-3\Jmail4C\Jmail4C\setup4mail.txt
+陈志刚	chenzhigang@tasly.com	test5	测试5	【四川大区季例会费用核销表】-填写本次核销明细-大健康2016.9.6.xls	S:\myCsharp\Jmail4C-2016-11-3\Jmail4C\Jmail4C\setup4mail.txt
+陈志刚	chenzhigang@tasly.com	test5	测试5	【四川大区季例会费用核销表】-填写本次核销明细-大健康2016.9.6.xls	S:\myCsharp\Jmail4C-2016-11-3\Jmail4C\Jmail4C\setup4mail.txt
+陈志刚	chenzhigang@tasly.com	test5	测试5	【四川大区季例会费用核销表】-填写本次核销明细-大健康2016.9.6.xls	S:\myCsharp\Jmail4C-2016-11-3\Jmail4C\Jmail4C\setup4mail.txt

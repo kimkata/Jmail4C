@@ -1,0 +1,6 @@
+收件人姓名:	收件人邮件地址	发送状态->错误的邮箱地址	计数：1
+陈志刚:	chenzhigang@tasly.com	发送状态->成功√	计数：2
+陈志刚:	chenzhigang@tasly.com	发送状态->成功√	计数：3
+陈志刚:	chenzhigang@tasly.com	发送状态->成功√	计数：4
+陈志刚:	chenzhigang@tasly.com	发送状态->成功√	计数：5
+陈志刚:	chenzhigang@tasly.com	发送状态->成功√	计数：6
