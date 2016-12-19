@@ -109,14 +109,41 @@ int main(int argc, char* *argv)
 	CoInitialize(NULL);
 
 	//如果setup4mail存在，则读取前4行，存入到buff[]中
+	cout << endl << "#########欢迎使用Jmail_for_C++邮件发送软件#############" << endl << endl;
 	if (setup4mail) {
 		std::cout << "------------------用户名+密码配置信息如下：-------------------------" << endl;
 		for (int i = 0; i < 4; i++) {
 			getline(setup4mail, buff[i], '\n');
 			std::cout << buff[i] << endl;
 		}
-		std::cout << "---------------------------------------------------------------------" << endl;
+
+		std::cout << "----------------------------------------------------------------------------------------------------" << endl;
+		std::cout <<endl<<"请仔细核对以上信息，如果不正确，请在软件目录内找到 setup4mail.txt文件更改，并重新打开本软件!" << endl;
+		std::cout <<endl<< "----------------------------------------------------------------------------------------------------" << endl;
 	}
+	else { //如果不存在setup4mail.txt文件，则创建文件，并引导用户进行输入。		
+		
+		cout << "请根据提示设置邮件相关信息:" << endl << endl;
+		cout << "请输入用户名：";		
+		cin >> username;		
+		cout << "请输入密码：";		
+		cin >> password;		
+		cout << "请输入发件邮件地址：";
+		cin >> mailAddress;		
+		cout <<"请输入smtp服务器:";
+		cin >> smtp;
+		string username_input =  "用户名:"+username+"\n";
+		string mailAddress_input = "邮箱地址:" + mailAddress + "\n";
+		string password_input = "登陆密码:"+password + "\n";		
+		string smtp_input = "邮件服务器:"+smtp;
+		ofstream ofs("setup4mail.txt", ios::trunc);
+		ofs.write(username_input.c_str(),strlen(username_input.c_str()));
+		ofs.write(mailAddress_input.c_str(), strlen(mailAddress_input.c_str()));
+		ofs.write(password_input.c_str(), strlen(password_input.c_str()));		
+		ofs.write(smtp_input.c_str(), strlen(smtp_input.c_str()));
+
+	}
+
 	if (regex_search(buff[1], reg)) {
 		sregex reg_username_head = sregex::compile("用户名:");
 		sregex reg_mailaddress_head = sregex::compile("邮箱地址:");
@@ -133,7 +160,7 @@ int main(int argc, char* *argv)
 		std::cout << "邮箱地址：" << mailAddress << endl;
 		std::cout << "邮箱密码：" << password << endl;
 		std::cout << "邮件SMTP服务器：" << smtp << endl;
-		std::cout << "------------------请核对以上信息，如果都正确，请按任意键继续--------------------" << endl;
+		std::cout << "----------------------------------------------------------------------------------------------------" << endl;
 	}
 	if (maildata) {
 		std::cout << "正在统计邮件的数量：" << endl;
@@ -145,7 +172,7 @@ int main(int argc, char* *argv)
 			if (!(str == ""))
 			{
 				vector_of_line.push_back(str);
-				std::cout << "*";
+				std::cout << " * ";
 			}
 
 		}
@@ -155,8 +182,7 @@ int main(int argc, char* *argv)
 			<< "--------------------------------------------------------------------------------------------" << endl
 			<< first_line_without_tab << endl << "--------------------------------------------------------------------------------------------" << endl
 			<< "备注：默认第一行为标题行，以上标题行不统计在邮件数量中！" << endl << endl
-			<< "邮件的数量为:" << vector_of_line.size()-1 << endl << endl
-			<< "请检查最后一行是否为空行，如果是空行，请将其删除！" << endl << endl;
+			<< "邮件的数量为:" << vector_of_line.size() - 1 << endl << endl;
 	}
 
 
