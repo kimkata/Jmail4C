@@ -1,0 +1,9 @@
+*.VC.db
+/.vs/
+/Release/
+/Debug/
+/ipch/
+/Jmail4C/Debug/
+/Jmail4C/Release/
+/Jmail4C/setup4mail.txt
+/Jmail4C/log4mail.txt
